@@ -1,28 +1,4 @@
-<form>
-    <div class="form-group">
-        <label for="firstName">FIRSTNAME</label>
-        <input ngModel name="firstName" #firstName="ngModel" id="firstName" type="text" placeholder="Enter firstName" class="form-control" required>
-    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">First name is required</div>
-    </div>
-    <div class="form-group">
-        <label for="middlename">MIDDLENAME</label>
-        <input id="middlename" type="text" placeholder="Enter middlename" class="form-control">
-    </div>
-   <div class="form-group">
-        <label for="lastname">LASTNAME</label>
-        <input id="lastname" type="text" placeholder="Enter lastname" class="form-control" required>
-   </div>
-   <div class="form-group">
-        <label for="department">DEPARTMENT</label>
-        <input id="department" type="text" placeholder="Enter department" class="form-control" required>
-   </div>
-   <div class="form-group">
-        <label for="semester">SEMESTER</label>
-        <input id="semester" type="text" placeholder="Enter semester" class="form-control" required>
-   </div>
-   <div class="form-group">
-        <label for="address">ADDRESS</label>
-        <textarea id="address" rows="5" cols="20" placeholder="Enter permanent address" class="form-control" required></textarea>
-  </div>
-  <button class="btn btn-primary">SUBMIT</button>
-  </form>
+<h1>name=<b>{{namedata}}</b></h1>
+<h1>department=<b>{{departmentdata}}</b></h1>
+<h1>semester=<b>{{semesterdata}}</b></h1>
+<h1>address=<b>{{addressdata}}}</b></h1>

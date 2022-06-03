@@ -1,1 +1,25 @@
-<app-form></app-form>
+<div class="container">
+    <h1>Student details</h1>
+    <form>
+        <div class="form-group">
+            <label>name</label>
+            <input #name placeholder="Enter name" class="form-control" required>
+        </div>
+       <div class="form-group">
+            <label>department</label>
+            <input #department  placeholder="Enter department" class="form-control" required>
+       </div>
+       <div class="form-group">
+            <label>semester</label>
+            <input #semester placeholder="Enter semester" class="form-control"  required>
+       </div>
+       <div class="form-group">
+            <label>address</label>
+            <textarea #address placeholder="Enter permanent address" rows="5" cols="20" required></textarea>
+      </div>
+      <a style="color: #fff;" (click)="transferdata(name.value,department.value,semester.value,address.value)" class="btn btn-primary" href="#">submit</a>
+      </form>
+      <div class="forms">
+      <app-form [namedata]="inputname" [departmentdata]="inputdepartment" [semesterdata]="inputsemester" [addressdata]="inputaddress"></app-form>
+      </div>
+    </div>
