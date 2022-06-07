@@ -6,16 +6,18 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-   @Input() namedata:any 
-   @Input() departmentdata:any;
-   @Input() semesterdata:any;
-   @Input() addressdata:any
+  
+   @Input() objdata:any
+   listarray=[{"name":'',"department":'',"semester":''}]
 
   constructor() { 
 
   }
+  updatelist(obj:any){
+    this.listarray.push(obj);
+  }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
   }
 
 }

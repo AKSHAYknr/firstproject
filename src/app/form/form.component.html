@@ -1,4 +1,18 @@
-<h1>name=<b>{{namedata}}</b></h1>
-<h1>department=<b>{{departmentdata}}</b></h1>
-<h1>semester=<b>{{semesterdata}}</b></h1>
-<h1>address=<b>{{addressdata}}}</b></h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Semester</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let inputobj of listarray">
+        <td>{{inputobj.name}}</td>
+        <td>{{inputobj.department}}</td>
+        <td>{{inputobj.semester}}</td>
+
+    </tbody>
+</table>
+
+  
+  

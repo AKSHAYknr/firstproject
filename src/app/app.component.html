@@ -1,25 +1,37 @@
+<h1>student details</h1>
 <div class="container">
-    <h1>Student details</h1>
     <form>
-        <div class="form-group">
-            <label>Name</label>
-            <input #name placeholder="Enter name" class="form-control" required>
-        </div>
-       <div class="form-group">
-            <label>department</label>
-            <input #department  placeholder="Enter department" class="form-control" required>
-       </div>
-       <div class="form-group">
-            <label>semester</label>
-            <input #semester placeholder="Enter semester" class="form-control"  required>
-       </div>
-       <div class="form-group">
-            <label>address</label>
-            <textarea #address placeholder="Enter permanent address" rows="5" cols="20" required></textarea>
-      </div>
-      <a style="color: #fff;" (click)="transferdata(name.value,department.value,semester.value,address.value)" class="btn btn-primary" href="#">submit</a>
-      </form>
+     <mat-form-field class="form-group" >
+          <mat-label>name</mat-label>
+          <input #name matInput placeholder="Enter fullname" class="form-control">
+     </mat-form-field>
+     <mat-form-field class="form-group">
+          <mat-label>department</mat-label>
+         <mat-select #department [(ngModel)]="inputobj.department">
+              <mat-option  value="information-technology">information-technology</mat-option>
+              <mat-option  value="mechanical-engineering">mechanical-engineering</mat-option>
+              <mat-option  value="civil-engineering">civil-engineering</mat-option>
+         </mat-select>
+     </mat-form-field>
+     <mat-form-field class="form-group" >
+          <mat-label>semester</mat-label>
+          <mat-select #semester [(ngModel)]="inputobj.semester" >
+               <mat-option  value="1">1</mat-option>
+               <mat-option  value="2">2</mat-option>
+               <mat-option  value="3">3</mat-option>
+               <mat-option  value="4">4</mat-option>
+               <mat-option  value="5">5</mat-option>
+               <mat-option  value="6">6</mat-option>
+               <mat-option  value="7">7</mat-option>
+               <mat-option  value="8">8</mat-option>
+          </mat-select>
+     </mat-form-field>
+     <div>
+      <button class="button-24" (click)="transferdata(inputobj)" role="button">submit</button>
+     </div>
+</form>
       <div class="forms">
-      <app-form [namedata]="inputname" [departmentdata]="inputdepartment" [semesterdata]="inputsemester" [addressdata]="inputaddress"></app-form>
+      <app-form [objdata]="inputobj"></app-form>
       </div>
     </div>
+   

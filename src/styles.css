@@ -1,4 +1,7 @@
 body{
-    background: linear-gradient(95deg,#d9afd9 ,#97d9e1);
-    padding: 20px;
+       background: linear-gradient(90deg,#A896A5,#AAA6E0);
+       padding: 20px;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
