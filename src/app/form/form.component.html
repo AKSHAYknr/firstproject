@@ -1,18 +1,28 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Department</th>
-            <th>Semester</th>
-        </tr>
-    </thead>
-    <tbody *ngFor="let inputobj of listarray">
-        <td>{{inputobj.name}}</td>
-        <td>{{inputobj.department}}</td>
-        <td>{{inputobj.semester}}</td>
+<table mat-table [dataSource]="objdata" class="mat-elevation-z8">
 
-    </tbody>
-</table>
+   
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let inputobj"> {{inputobj.name}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="department">
+      <th mat-header-cell *matHeaderCellDef> Department </th>
+      <td mat-cell *matCellDef="let inputobj"> {{inputobj.department}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="semester">
+      <th mat-header-cell *matHeaderCellDef> Semester </th>
+      <td mat-cell *matCellDef="let inputobj"> {{inputobj.semester}} </td>
+    </ng-container>
+  
+   
+  
+    <tr mat-header-row *matHeaderRowDef="listarray"></tr>
+    <tr mat-row *matRowDef="let row; columns: listarray;"></tr>
+  </table>
+  
 
   
   
